@@ -21,11 +21,11 @@ function ToDoForm({ onAdd, buttonText = 'Add', placeholder = 'Enter task', initi
         type="text"
         value={title}
         onChange={handleInputChange}
-        placeholder={placeholder} 
+        placeholder={placeholder}
         className="input-field"
       />
       <button type="submit" className="add-btn">
-        {buttonText} 
+        {buttonText}
       </button>
     </form>
   )

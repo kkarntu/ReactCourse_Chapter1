@@ -15,7 +15,7 @@ function App() {
     }
     setToDo([...toDo, newToDo])
   }
-
+//
   const handleDeleteToDo = (id) => {
     setToDo(toDo.filter((item) => item.id !== id))
   }
