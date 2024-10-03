@@ -22,7 +22,7 @@ const useGetAllToDo = () => {
     fetchData();
   }, []); // виконується лише при першому завантаженні
 
-  return { isLoading, data, error };
+  return { isLoading, data, error, setData };
 };
 
 export default useGetAllToDo;
