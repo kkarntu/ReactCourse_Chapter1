@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ToDoList({ toDo, onDelete }) {
+function ToDoList({ toDo = [], onDelete }) {
   return (
     <ul className="todo-list">
       {toDo.map((item) => (
@@ -12,7 +12,7 @@ function ToDoList({ toDo, onDelete }) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
 export default ToDoList

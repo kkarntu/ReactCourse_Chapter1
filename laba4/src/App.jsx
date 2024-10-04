@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const { isLoading, data: fetchedToDo, error, setData } = useGetAllToDo();
-  const [localToDo, setLocalToDo] = useState([]);
+
   const [searchValue, setSearchValue] = useState('');
 
  
@@ -17,11 +17,11 @@ function App() {
       id: Date.now(),
       title,
     };
-    setData([...localToDo, newToDo]);
+    setData([...fetchedToDo, newToDo]);
   };
 
   const handleDeleteToDo = (id) => {
-   setData(localToDo.filter((item) => item.id !== id));
+   setData(fetchedToDo.filter((item) => item.id !== id));
   };
 
   const filteredToDo = fetchedToDo?.filter(
